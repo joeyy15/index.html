@@ -51,22 +51,15 @@
       width: 100%;
       padding: 40px;
       text-align: justify;
-      animation: scrollUp 20s linear forwards;
-    }
-
-    @keyframes scrollUp {
-      from {
-        bottom: -100%;
-      }
-      to {
-        bottom: 0;
-      }
+      font-size: 14px;
+      line-height: 1.5;
+      /* hilangkan animasi CSS scrollUp */
     }
 
     /* Judul */
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 28px; /* dinaikin biar enak dibaca */
+      font-size: 26px;
       text-align: center;
       margin-bottom: 50px;
       letter-spacing: 2px;
@@ -86,24 +79,21 @@
 
     /* Paragraf */
     p {
-      font-size: 12px; /* naik dikit biar readable */
-      line-height: 1.5; /* pas buat jarak antar baris */
-      margin-bottom: 20px; /* ruang antar paragraf */
+      margin-bottom: 30px;
     }
   </style>
 </head>
 
 <body>
-
   <!-- Love Background -->
   <script>
     for (let i = 0; i < 40; i++) {
-      let love = document.createElement('div');
-      love.className = 'love';
-      love.innerHTML = '❤';
-      love.style.left = Math.random() * 100 + 'vw';
-      love.style.animationDuration = 5 + Math.random() * 10 + 's';
-      love.style.fontSize = 10 + Math.random() * 25 + 'px';
+      let love = document.createElement("div");
+      love.className = "love";
+      love.innerHTML = "❤";
+      love.style.left = Math.random() * 100 + "vw";
+      love.style.animationDuration = (5 + Math.random() * 10) + "s";
+      love.style.fontSize = (10 + Math.random() * 25) + "px";
       document.body.appendChild(love);
     }
   </script>
@@ -113,44 +103,41 @@
     <h1>Happy 21st Birthday, Zigaaaa</h1>
 
     <p>
-      Hari ini, aku cuma mau bilang satu hal besar yang sering kelewat. Kamu itu penting.
-      Bukan karena gelar, bukan karena terlihat kuat terus, tapi karena kamu tetep bertahan
-      walau dunia sering nyuruh nyerah.
+      Hari ini, aku cuma mau bilang satu hal besar yang sering kelewat. Kamu itu penting. Bukan karena gelar, bukan karena terlihat kuat terus, tapi karena kamu tetep bertahan walau dunia sering nyuruh nyerah. Kamu tumbuh dengan cara kamu sendiri. Pelan, kadang berat, kadang capek banget, tapi tetep jalan.
     </p>
 
     <p>
-      Kamu tumbuh dengan cara kamu sendiri. Pelan, kadang berat, kadang capek banget,
-      tapi tetep jalan.
+      Aku tau kamu ga selalu cerita. Kamu tipe yang nyimpen, mikir sendiri, beresin sendiri. Keras kepala sedikit, tapi kalau udah niat, kamu total. Di balik sikap kamu yang kelihatan cuek itu, ada hati yang peduli, yang mikir jauh, yang sebenernya pengen semua orang baik-baik aja.
     </p>
 
     <p>
-      Aku tau kamu ga selalu cerita. Kamu tipe yang nyimpen, mikir sendiri, beresin sendiri.
-      Keras kepala sedikit, tapi kalau udah niat, kamu total.
+      Di umur kamu yang sekarang, semoga hidup lebih ramah yaa. Semoga hal-hal yang bikin kamu ragu pelan-pelan diganti sama keyakinan. Semoga capek kamu terbayar, usaha kamu ketemu jalannya, dan hari-hari kamu ga cuma tentang bertahan tapi juga menikmati.
     </p>
 
-    <p>
-      Di balik sikap kamu yang kelihatan cuek itu, ada hati yang peduli,
-      yang mikir jauh, yang sebenernya pengen semua orang baik-baik aja.
-    </p>
-
-    <p>
-      Di umur kamu yang sekarang, semoga hidup lebih ramah yaa.
-      Semoga hal-hal yang bikin kamu ragu pelan-pelan diganti sama keyakinan.
-    </p>
-
-    <p>
-      Semoga capek kamu terbayar, usaha kamu ketemu jalannya,
-      dan hari-hari kamu ga cuma tentang bertahan tapi juga menikmati.
-    </p>
-
-    <p>
-      Kamu ga harus selalu kuat, ga harus selalu bener, dan ga harus selalu keliatan oke.
-      Jadi manusia aja, itu sudah cukup.
-    </p>
-
-    <p style="text-align:center; margin-top:60px;">
+    <p style="text-align:center; margin-top:30px;">
+      Kamu ga harus selalu kuat, ga harus selalu bener, dan ga harus selalu keliatan oke. Jadi manusia aja, itu sudah cukup.<br /><br />
       Happy birthday, Zirgaaa 🤍
     </p>
   </div>
+
+  <script>
+    const container = document.querySelector('.container');
+    let bottomPos = -100; // mulai posisi bawah -100%
+    const endPos = 100;    // target posisi akhir 100%
+    const step = 0.5;      // kecepatan naik (persen)
+
+    function scrollUp() {
+      if (bottomPos < endPos) {
+        bottomPos += step;
+        container.style.bottom = bottomPos + '%';
+        requestAnimationFrame(scrollUp);
+      }
+    }
+
+    // Mulai scroll setelah delay 3 detik (judul fadeIn selesai)
+    setTimeout(() => {
+      scrollUp();
+    }, 3000);
+  </script>
 </body>
 </html>
