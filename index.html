@@ -5,7 +5,7 @@
   <title>Happy Birthday Zigaaaa</title>
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -15,17 +15,17 @@
     }
 
     body {
+      height: 100vh;
       background: radial-gradient(circle at top, #1f2933, #020617);
-      color: #f1f5f9;
+      color: #f8fafc;
       font-family: 'Poppins', sans-serif;
       overflow: hidden;
-      height: 100vh;
     }
 
     /* LOVE BACKGROUND */
     .love {
       position: fixed;
-      color: rgba(255, 182, 193, 0.18);
+      color: rgba(255, 182, 193, 0.2);
       animation: floatUp linear infinite;
       pointer-events: none;
     }
@@ -44,56 +44,58 @@
       }
     }
 
-    /* TEXT CONTAINER */
+    /* MAIN CONTAINER */
     .container {
       position: absolute;
-      bottom: -10%;
+      bottom: -100%;
       width: 100%;
-      padding: 60px 40px;
+      padding: 70px 40px;
       text-align: justify;
-      animation: scrollText 30s linear forwards;
+      animation: slideUp 2.5s ease-out forwards;
     }
 
-    @keyframes scrollText {
+    @keyframes slideUp {
       from {
-        bottom: -10%;
+        bottom: -100%;
+        opacity: 0;
       }
       to {
-        bottom: 110%;
+        bottom: 0;
+        opacity: 1;
       }
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 56px;
+      font-size: 80px; /* 2x lebih besar */
       text-align: center;
-      margin-bottom: 70px;
+      margin-bottom: 90px;
       letter-spacing: 2px;
     }
 
     p {
-      font-size: 24px;
-      line-height: 2.5;
-      margin-bottom: 60px;
+      font-size: 36px; /* 2x lebih besar */
+      line-height: 2.6;
+      margin-bottom: 80px;
       font-weight: 400;
     }
 
     .center {
       text-align: center;
-      font-size: 26px;
-      margin-top: 80px;
+      font-size: 38px;
+      margin-top: 100px;
     }
 
-    /* RESPONSIVE */
+    /* RESPONSIVE HP */
     @media (max-width: 480px) {
       h1 {
-        font-size: 44px;
+        font-size: 60px;
       }
       p {
-        font-size: 22px;
+        font-size: 30px;
       }
       .center {
-        font-size: 24px;
+        font-size: 32px;
       }
     }
   </style>
@@ -103,12 +105,12 @@
 
   <!-- LOVE SCRIPT -->
   <script>
-    for (let i = 0; i < 35; i++) {
+    for (let i = 0; i < 30; i++) {
       const love = document.createElement("div");
       love.className = "love";
       love.innerHTML = "❤";
       love.style.left = Math.random() * 100 + "vw";
-      love.style.fontSize = (14 + Math.random() * 26) + "px";
+      love.style.fontSize = (16 + Math.random() * 28) + "px";
       love.style.animationDuration = (8 + Math.random() * 8) + "s";
       document.body.appendChild(love);
     }
@@ -140,9 +142,8 @@
     </p>
 
     <p>
-      Semoga hidup ke depan lebih ramah.
-      Capek kamu terbayar, usaha kamu ketemu jalannya,
-      dan hari-hari kamu bukan cuma bertahan tapi juga menikmati.
+      Kamu ga harus selalu kuat.
+      Jadi manusia aja, itu sudah cukup.
     </p>
 
     <p class="center">
