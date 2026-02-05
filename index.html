@@ -1,35 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday Zigaa</title>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Zigaaaa</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+
   <style>
-    body {
+    * {
       margin: 0;
-      padding: 40px;
-      background: linear-gradient(180deg, #0f0f14, #1a1a25);
-      color: #ffffff;
-      font-family: "Georgia", serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .container {
-      max-width: 900px;
-      font-size: 2rem; /* 2x lebih besar */
-      line-height: 1.8;
-      text-align: justify;
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at top, #1f2933, #020617);
+      color: #f8fafc;
+      font-family: 'Poppins', sans-serif;
       overflow: hidden;
+      position: relative;
     }
 
-    .text {
+    /* LOVE BACKGROUND */
+    .love {
+      position: fixed;
+      color: rgba(255, 182, 193, 0.2);
+      animation: floatUp linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      to {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+      position: absolute;
+      bottom: 0;            /* Mulai di bawah, tapi langsung animasi naik */
+      width: 100%;
+      padding: 70px 40px;
+      text-align: justify;
+      animation: slideUp 3s ease-out forwards; /* animasi sekali, lalu berhenti */
       transform: translateY(100%);
-      animation: riseUp 2.2s ease-out forwards;
+      opacity: 0;
     }
 
-    @keyframes riseUp {
+    @keyframes slideUp {
       from {
         transform: translateY(100%);
         opacity: 0;
@@ -39,43 +67,87 @@
         opacity: 1;
       }
     }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 80px; /* 2x lebih besar */
+      text-align: center;
+      margin-bottom: 90px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 36px; /* 2x lebih besar */
+      line-height: 2.6;
+      margin-bottom: 80px;
+      font-weight: 400;
+    }
+
+    .center {
+      text-align: center;
+      font-size: 38px;
+      margin-top: 100px;
+    }
+
+    /* RESPONSIVE HP */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 60px;
+      }
+      p {
+        font-size: 30px;
+      }
+      .center {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
+
 <body>
 
+  <!-- LOVE SCRIPT -->
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const love = document.createElement("div");
+      love.className = "love";
+      love.innerHTML = "❤";
+      love.style.left = Math.random() * 100 + "vw";
+      love.style.fontSize = (16 + Math.random() * 28) + "px";
+      love.style.animationDuration = (8 + Math.random() * 8) + "s";
+      document.body.appendChild(love);
+    }
+  </script>
+
+  <!-- TEXT -->
   <div class="container">
-    <div class="text">
-      Happy 21st Birthday, Zigaaaa.<br><br>
+    <h1>Happy 21st Birthday, Zigaaaa</h1>
 
-      Hari ini, aku cuma mau bilang satu hal besar yang sering kelewat.
-      Kamu itu penting. Bukan karena gelar, bukan karena terlihat kuat terus,
-      tapi karena kamu tetep bertahan walau dunia sering nyuruh nyerah.
+    <p>
+      Hari ini, aku cuma mau bilang satu hal besar yang sering kelewat. Kamu itu penting.
+      Bukan karena gelar, bukan karena terlihat kuat terus, tapi karena kamu tetep bertahan
+      walau dunia sering nyuruh nyerah.
+    </p>
+    <p>
       Kamu tumbuh dengan cara kamu sendiri. Pelan, kadang berat, kadang capek banget,
-      tapi tetep jalan.<br><br>
+      tapi tetep jalan.
+    </p>
+    <p>
+      Aku tau kamu ga selalu cerita. Kamu tipe yang nyimpen, mikir sendiri, beresin sendiri.
+      Keras kepala sedikit, tapi kalau udah niat, kamu total.
+    </p>
+    <p>
+      Di balik sikap kamu yang kelihatan cuek itu, ada hati yang peduli,
+      yang mikir jauh, dan sebenernya pengen semua orang baik-baik aja.
+    </p>
+    <p>
+      Kamu ga harus selalu kuat.
+      Jadi manusia aja, itu sudah cukup.
+    </p>
 
-      Aku tau kamu ga selalu cerita. Kamu tipe yang nyimpen, mikir sendiri,
-      beresin sendiri. Keras kepala sedikit, tapi kalau udah niat, kamu total.
-      Dan di balik sikap kamu yang kelihatan cuek itu, ada hati yang peduli,
-      yang mikir jauh, yang sebenernya pengen semua orang baik-baik aja.<br><br>
-
-      Di umur kamu yang sekarang, semoga hidup lebih ramah yaa.
-      Semoga hal-hal yang bikin kamu ragu pelan-pelan diganti sama keyakinan.
-      Semoga capek kamu terbayar, usaha kamu ketemu jalannya,
-      dan hari-hari kamu ga cuma tentang bertahan tapi juga menikmati.<br><br>
-
-      Aku berharap kamu selalu sehat, selalu kuat,
-      dan selalu inget kalau kamu ga sendirian.
-      Kamu ga harus selalu kuat, ga harus selalu bener,
-      dan ga harus selalu keliatan oke.
-      Jadi manusia aja, itu sudah cukup.<br><br>
-
-      Terima kasih karena udah jadi kamu.<br>
-      Terima kasih sudah bertahan sejauh ini.<br>
-      Dan semoga di langkah-langkah ke depan,
-      kamu nemuin lebih banyak hal baik dari yang kamu sangka.<br><br>
-
-      Happy birthday, Zirgaaa. 🤍
-    </div>
+    <p class="center">
+      Happy birthday, Zirgaaa 🤍
+    </p>
   </div>
 
 </body>
