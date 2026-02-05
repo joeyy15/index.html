@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Zigaaaa</title>
+
+  <!-- Google Font Estetik -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(160deg, #0f172a, #111827);
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: #e5e7eb;
+    }
+
+    /* Background Love */
+    .love {
+      position: absolute;
+      color: rgba(255, 182, 193, 0.15);
+      font-size: 18px;
+      animation: float 10s linear infinite;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* Container */
+    .container {
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      padding: 40px;
+      text-align: justify;
+      animation: scrollUp 80s linear forwards;
+    }
+
+    @keyframes scrollUp {
+      from {
+        bottom: -100%;
+      }
+      to {
+        bottom: 100%;
+      }
+    }
+
+    /* Judul */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      text-align: center;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+      animation: fadeIn 3s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Paragraf */
+    p {
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Love Background -->
+  <script>
+    for (let i = 0; i < 40; i++) {
+      let love = document.createElement("div");
+      love.className = "love";
+      love.innerHTML = "❤";
+      love.style.left = Math.random() * 100 + "vw";
+      love.style.animationDuration = (5 + Math.random() * 10) + "s";
+      love.style.fontSize = (10 + Math.random() * 25) + "px";
+      document.body.appendChild(love);
+    }
+  </script>
+
+  <!-- Text Container -->
+  <div class="container">
+    <h1>Happy 21st Birthday, Zigaaaa</h1>
+
+    <p>
+      Hari ini, aku cuma mau bilang satu hal besar yang sering kelewat. Kamu itu penting.
+      Bukan karena gelar, bukan karena terlihat kuat terus, tapi karena kamu tetep bertahan
+      walau dunia sering nyuruh nyerah.
+    </p>
+
+    <p>
+      Kamu tumbuh dengan cara kamu sendiri. Pelan, kadang berat, kadang capek banget,
+      tapi tetep jalan.
+    </p>
+
+    <p>
+      Aku tau kamu ga selalu cerita. Kamu tipe yang nyimpen, mikir sendiri, beresin sendiri.
+      Keras kepala sedikit, tapi kalau udah niat, kamu total.
+    </p>
+
+    <p>
+      Di balik sikap kamu yang kelihatan cuek itu, ada hati yang peduli,
+      yang mikir jauh, yang sebenernya pengen semua orang baik-baik aja.
+    </p>
+
+    <p>
+      Di umur kamu yang sekarang, semoga hidup lebih ramah yaa.
+      Semoga hal-hal yang bikin kamu ragu pelan-pelan diganti sama keyakinan.
+    </p>
+
+    <p>
+      Semoga capek kamu terbayar, usaha kamu ketemu jalannya,
+      dan hari-hari kamu ga cuma tentang bertahan tapi juga menikmati.
+    </p>
+
+    <p>
+      Kamu ga harus selalu kuat, ga harus selalu bener, dan ga harus selalu keliatan oke.
+      Jadi manusia aja, itu sudah cukup.
+    </p>
+
+    <p style="text-align:center; margin-top:60px;">
+      Happy birthday, Zirgaaa 🤍
+    </p>
+  </div>
+
+</body>
+</html>
