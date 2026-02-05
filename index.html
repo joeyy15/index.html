@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Happy Birthday Zigaaaa</title>
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Google Font Estetik -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -15,106 +15,100 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #1f2933, #020617);
-      color: #f1f5f9;
-      font-family: 'Poppins', sans-serif;
-      overflow: hidden;
       height: 100vh;
+      background: linear-gradient(160deg, #0f172a, #111827);
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: #e5e7eb;
     }
 
-    /* LOVE BACKGROUND */
+    /* Background Love */
     .love {
-      position: fixed;
-      color: rgba(255, 182, 193, 0.18);
-      animation: floatUp linear infinite;
-      pointer-events: none;
+      position: absolute;
+      color: rgba(255, 182, 193, 0.15);
+      font-size: 18px;
+      animation: float 10s linear infinite;
     }
 
-    @keyframes floatUp {
-      from {
-        transform: translateY(100vh);
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.8);
         opacity: 0;
       }
-      20% {
-        opacity: 0.8;
+      50% {
+        opacity: 0.6;
       }
-      to {
-        transform: translateY(-10vh);
+      100% {
+        transform: translateY(-10vh) scale(1.2);
         opacity: 0;
       }
     }
 
-    /* TEXT CONTAINER */
+    /* Container */
     .container {
       position: absolute;
-      bottom: -10%;
+      bottom: -100%;
       width: 100%;
-      padding: 60px 40px;
+      padding: 40px;
       text-align: justify;
-      animation: scrollText 30s linear forwards;
+      animation: scrollUp 20s linear forwards;
     }
 
-    @keyframes scrollText {
+    @keyframes scrollUp {
       from {
-        bottom: -10%;
+        bottom: -100%;
       }
       to {
-        bottom: 110%;
+        bottom: 0;
       }
     }
 
+    /* Judul */
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 56px;
+      font-size: 21px; /* 2x lebih kecil */
       text-align: center;
-      margin-bottom: 70px;
+      margin-bottom: 50px;
       letter-spacing: 2px;
+      animation: fadeIn 3s ease forwards;
     }
 
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Paragraf */
     p {
-      font-size: 24px;
-      line-height: 2.5;
-      margin-bottom: 60px;
-      font-weight: 400;
-    }
-
-    .center {
-      text-align: center;
-      font-size: 26px;
-      margin-top: 80px;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 44px;
-      }
-      p {
-        font-size: 22px;
-      }
-      .center {
-        font-size: 24px;
-      }
+      font-size: 8px; /* 2x lebih kecil */
+      line-height: 1.4; /* rapetin jarak antar baris */
+      margin-bottom: 15px; /* rapetin jarak antar paragraf */
     }
   </style>
 </head>
 
 <body>
 
-  <!-- LOVE SCRIPT -->
+  <!-- Love Background -->
   <script>
-    for (let i = 0; i < 35; i++) {
-      const love = document.createElement("div");
+    for (let i = 0; i < 40; i++) {
+      let love = document.createElement("div");
       love.className = "love";
       love.innerHTML = "❤";
       love.style.left = Math.random() * 100 + "vw";
-      love.style.fontSize = (14 + Math.random() * 26) + "px";
-      love.style.animationDuration = (8 + Math.random() * 8) + "s";
+      love.style.animationDuration = (5 + Math.random() * 10) + "s";
+      love.style.fontSize = (10 + Math.random() * 25) + "px";
       document.body.appendChild(love);
     }
   </script>
 
-  <!-- TEXT -->
+  <!-- Text Container -->
   <div class="container">
     <h1>Happy 21st Birthday, Zigaaaa</h1>
 
@@ -136,16 +130,25 @@
 
     <p>
       Di balik sikap kamu yang kelihatan cuek itu, ada hati yang peduli,
-      yang mikir jauh, dan sebenernya pengen semua orang baik-baik aja.
+      yang mikir jauh, yang sebenernya pengen semua orang baik-baik aja.
     </p>
 
     <p>
-      Semoga hidup ke depan lebih ramah.
-      Capek kamu terbayar, usaha kamu ketemu jalannya,
-      dan hari-hari kamu bukan cuma bertahan tapi juga menikmati.
+      Di umur kamu yang sekarang, semoga hidup lebih ramah yaa.
+      Semoga hal-hal yang bikin kamu ragu pelan-pelan diganti sama keyakinan.
     </p>
 
-    <p class="center">
+    <p>
+      Semoga capek kamu terbayar, usaha kamu ketemu jalannya,
+      dan hari-hari kamu ga cuma tentang bertahan tapi juga menikmati.
+    </p>
+
+    <p>
+      Kamu ga harus selalu kuat, ga harus selalu bener, dan ga harus selalu keliatan oke.
+      Jadi manusia aja, itu sudah cukup.
+    </p>
+
+    <p style="text-align:center; margin-top:60px;">
       Happy birthday, Zirgaaa 🤍
     </p>
   </div>
